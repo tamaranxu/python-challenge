@@ -5,10 +5,9 @@ import csv
 # Set path for file
 csvpath = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyBank\Resources\budget_data.csv"
 
-# Create variables
-# TotalMonths = ?; Total number of months included in the dataset; number of rows
+# TotalMonths = ?; Total number of months included in the dataset; number of rows 
 # NetTotal = ?; Net total amount of Profit/Losses
-# AvgChange = ?; Average Change
+# AvgChange = ?; Average Change; print(average(profit_losses)); define average as function
 # IncreaseDate = ?; Greatest Increase
 # IncreaseProfit = ?
 # DecreaseDate = ?; Greatest Decrease
@@ -21,12 +20,15 @@ with open(csvpath) as csvfile:
     
     # Read the header row first
     csv_header = next(csvreader)
-    print(f"CSV Header: {csv_header}")
+    #print(f"CSV Header: {csv_header}")
     
     for row in csvreader:
-        print(row)
+        date = row[0]
+        profit_loss = row[1]
+        #print(profit_loss)
+        #print(date)
     
-    # Loop through looking for the calculations to print; each row is a list
+    # Loop through looking for the calculations to print; each row is a list; day 2 activity 12; day 3 activity 8
     #for row in csvreader:
         #if row[0] == variable
         
@@ -50,4 +52,4 @@ with open(csvpath) as csvfile:
 #print("Greatest Increase in Profits: " + IncreaseDate + "( $" + IncreaseProfit + ")")
 #print("Greatest Decrease in Profits: " + DecreaseDate + " ($" + DecreaseProfit + ")") 
 
-# Export text file with the final report (see day 2 activity 5)
+# Export text file with the final report (see day 2 activity 5, 11)
