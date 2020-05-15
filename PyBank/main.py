@@ -5,6 +5,13 @@ import csv
 # Set path for file
 csvpath = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyBank\Resources\budget_data.csv"
 
+# Create variables
+# Total number of months included in the dataset; number of rows
+# Net total amount of Profit/Losses
+# Average Change
+# Greatest Increase
+# Greatest Decrease
+
 # Open the CSV
 with open(csvpath, newLine="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
@@ -13,9 +20,9 @@ with open(csvpath, newLine="") as csvfile:
     for row in csvreader:
         #if row[0] == variable
         
-        # Total number of months included int he dataset (part of column 1)
+        # Total number of months included in the dataset (part of column 1); number of rows?
         
-        # Net total amount of "Profit/Losses" (column 2) over the entire period
+        # Net total amount of "Profit/Losses" (column 2) over the entire period; add them all up?
         
         # Average of the changes in "Profit/Losses" (column 2) over the entire period
         
@@ -24,5 +31,9 @@ with open(csvpath, newLine="") as csvfile:
         # Greatest decrease in losses (date and amount) over the entire period
         
 # Print final report as shown in example in homework instructions
+print(Financial Analysis)
+print("-----------------------------")
+# Print total months
+#print("Total Months: " + variable for total number of months) 
 
-# Export text file with the results
+# Export text file with the final report
