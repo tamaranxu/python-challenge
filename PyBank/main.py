@@ -23,6 +23,7 @@ with open(csvpath) as csvfile:
     #print(f"CSV Header: {csv_header}")
     
     for row in csvreader:
+        # creating lists for each column
         date = row[0]
         profit_loss = row[1]
         #print(profit_loss)
@@ -30,10 +31,12 @@ with open(csvpath) as csvfile:
     
     # Loop through looking for the calculations to print; each row is a list; day 2 activity 12; day 3 activity 8
     #for row in csvreader:
-        #if row[0] == variable
+        #if date == "":
+            #print(date.index)
         
-        # Total number of months included in the dataset (part of column 1); number of rows?
+        # Total number of months included in the dataset (part of column 1); number of rows?; find index(number in list)
         # re-set TotalMonths to be next row, so that final is last row, but need to not count header row
+        #print(date.index("Feb-17")) --> this didn't work
         
         # Net total amount of "Profit/Losses" (column 2) over the entire period; add them all up?
         
