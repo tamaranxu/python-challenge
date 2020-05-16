@@ -22,12 +22,25 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     #print(f"CSV Header: {csv_header}")
     
+    #total number of rows
+    total_months = []    
+    
     for row in csvreader:
         # creating lists for each column
-        date = row[0]
+        #date variable doesn't seem to be working as a list, but as individual lines
+        date = row [0]
         profit_loss = row[1]
+        
+        total_months.append(date)
+        print(str(len(total_months)))
+        #total_months = [str(len(date))
+        #print(total_months)
         #print(profit_loss)
-        #print(date)
+        #print(f"[{date.index(row)}] {date}") - didn't work'
+        #for index, date in csvreader:  - just printed all values, no index numbers
+            #print(index, date)
+        #for i in range(len(date)):
+            #print("[" + str(i) + "]" + date[i]) - printed each character in the date column, not whole value
     
     # Loop through looking for the calculations to print; each row is a list; day 2 activity 12; day 3 activity 8
     #for row in csvreader:
