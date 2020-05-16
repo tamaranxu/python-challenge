@@ -22,17 +22,24 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     #print(f"CSV Header: {csv_header}")
     
-    #total number of rows
+    #total number of rows; didn't work when under loop, but works here
+    #look at House of Pies bonus code
     total_months = []    
     
     for row in csvreader:
         # creating lists for each column
         #date variable doesn't seem to be working as a list, but as individual lines
         date = row [0]
+        #date_index = int(date) - doesn't work because it's not an integer
+        #print(date_index)
         profit_loss = row[1]
         
+        #when going through rows, adds each row to list
         total_months.append(date)
+        
+        #printed index for all rows, with last line being 86, which is correct and takes out header line
         print(str(len(total_months)))
+        #print(len(total_months))
         #total_months = [str(len(date))
         #print(total_months)
         #print(profit_loss)
