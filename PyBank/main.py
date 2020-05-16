@@ -5,7 +5,7 @@ import csv
 # Set path for file
 csvpath = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyBank\Resources\budget_data.csv"
 
-# TotalMonths = ?; Total number of months included in the dataset; number of rows 
+# TotalMonths = ?; Total number of months included in the dataset; number of rows; try count() or len() function
 # NetTotal = ?; Net total amount of Profit/Losses
 # AvgChange = ?; Average Change; print(average(profit_losses)); define average as function
 # IncreaseDate = ?; Greatest Increase
