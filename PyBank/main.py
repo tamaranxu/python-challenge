@@ -5,6 +5,9 @@ import csv
 # Set path for file
 csvpath = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyBank\Resources\budget_data.csv"
 
+# lists to store data
+date = []
+profit_losses = []
 # TotalMonths = ?; Total number of months included in the dataset; number of rows; try count() or len() function
 # NetTotal = ?; Net total amount of Profit/Losses
 # AvgChange = ?; Average Change; print(average(profit_losses)); define average as function
@@ -16,7 +19,7 @@ csvpath = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyBank\Res
 # Open the CSV
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
-    print(csvreader)
+    #print(csvreader)
     
     # Read the header row first
     csv_header = next(csvreader)
@@ -24,21 +27,37 @@ with open(csvpath) as csvfile:
     
     #total number of rows; didn't work when under loop, but works here
     #look at House of Pies bonus code
-    total_months = []    
+    #total_months = []    
     
     for row in csvreader:
+        # add date
+        date.append(row[0])
+        
+        # add profit/losses
+        profit_losses.append(row[1])
+        
+# print total months
+#print(len(date))
+
+# create variable for total months
+total_months = len(date)
+print(total_months)
+
+# see solution for wrestling with functions to see how to calculate and evaluate profit/losses as integers
+#total_profloss = sum(profit_losses)
+#print(total_profloss)
         # creating lists for each column
         #date variable doesn't seem to be working as a list, but as individual lines
-        date = row [0]
+        #date = row [0]
         #date_index = int(date) - doesn't work because it's not an integer
         #print(date_index)
-        profit_loss = row[1]
+        #profit_loss = row[1]
         
         #when going through rows, adds each row to list
-        total_months.append(date)
+        #total_months.append(date)
         
         #printed index for all rows, with last line being 86, which is correct and takes out header line
-        print(str(len(total_months)))
+        #print(str(len(total_months)))
         #print(len(total_months))
         #total_months = [str(len(date))
         #print(total_months)
