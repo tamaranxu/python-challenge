@@ -1,3 +1,5 @@
+# store profit numbers as int(x) somehow when adding to list in for loop
+
 # Modules
 import os
 import csv
