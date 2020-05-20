@@ -42,7 +42,5 @@ total_months = len(date)
 net_total = sum(profit_losses)
 
 # find average of changes in profit/losses over entire period, excluding first row
-average_change = sum(changes)/(len(changes)-1)
+average_change = round(sum(changes)/(len(changes)-1), 2)
 
-# Dictionary to store data
-monthly_profit_losses = {"Month": [date], "Increase/Decrease": [changes]}
