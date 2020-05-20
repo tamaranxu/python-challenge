@@ -17,8 +17,10 @@ with open(csvpath) as csvfile:
     # Read the header row first
     csv_header = next(csvreader)
 
-    # Set start value for previous row variable
+    # Set start value for previous row, increase, decrease variables
     previous_row = 0
+    greatest_increase = 0
+    greatest_decrease = 0
     
     for row in csvreader:
                 
@@ -28,11 +30,18 @@ with open(csvpath) as csvfile:
         # add profit_losses column to list as integer
         profit_losses.append(int(row[1]))
         
+        # variable for change
+        change = int(row[1]) - int(previous_row)
+        
         # calculate difference between profit_losses column and previous row; add to list as integer
         if previous_row == 0:
             changes.append(int(0))
         else:
-            changes.append(int(row[1]) - int(previous_row))
+            changes.append(change)
+            if change >= greatest_increase:
+                greatest_increase = change
+            elif change <= greatest_decrease:
+                greatest_decrease = change
         previous_row = int(row[1])
         
 # find total number of months in data set
