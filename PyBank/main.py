@@ -38,10 +38,16 @@ with open(csvpath) as csvfile:
             changes.append(int(0))
         else:
             changes.append(change)
+            
+            # calculate largest increase number and identify corresponding date
             if change >= greatest_increase:
                 greatest_increase = change
+                date_grt_incr = row[0]
+            
+            # calculate largest decrease number and identify corresponding date
             elif change <= greatest_decrease:
                 greatest_decrease = change
+                date_grt_decr = row[0]
         previous_row = int(row[1])
         
 # find total number of months in data set
