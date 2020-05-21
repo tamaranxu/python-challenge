@@ -56,6 +56,6 @@ total_months = len(date)
 # find the net total of profit/losses over entire period
 net_total = sum(profit_losses)
 
-# find average of changes in profit/losses over entire period, excluding first row
+# find average of changes in profit/losses over entire period, excluding first row (rounded to 2 decimals)
 average_change = round(sum(changes)/(len(changes)-1), 2)
 
