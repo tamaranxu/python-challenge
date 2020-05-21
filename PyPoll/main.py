@@ -7,6 +7,7 @@ csvpath = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyPoll\Res
 
 # lists to store data
 voter_id = []
+candidates = []
 
 # Open the CSV
 with open(csvpath) as csvfile:
