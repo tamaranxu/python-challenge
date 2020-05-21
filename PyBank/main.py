@@ -59,3 +59,11 @@ net_total = sum(profit_losses)
 # find average of changes in profit/losses over entire period, excluding first row (rounded to 2 decimals)
 average_change = round(sum(changes)/(len(changes)-1), 2)
 
+# print results
+print("Financial Analysis")
+print("-----------------------------------")
+print(f"Total Months: {str(total_months)}")
+print(f"Total: ${str(net_total)}")
+print(f"Average Change: ${str(average_change)}")
+print(f"Greatest Increase in Profits: {str(date_grt_incr)} (${str(greatest_increase)})")
+print(f"Greatest Decrease in Profits: {str(date_grt_decr)} (${str(greatest_decrease)})")
