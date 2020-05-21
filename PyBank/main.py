@@ -67,3 +67,21 @@ print(f"Total: ${str(net_total)}")
 print(f"Average Change: ${str(average_change)}")
 print(f"Greatest Increase in Profits: {str(date_grt_incr)} (${str(greatest_increase)})")
 print(f"Greatest Decrease in Profits: {str(date_grt_decr)} (${str(greatest_decrease)})")
+
+# export text file with same results
+# set variable for output file
+output_file = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyBank\Analysis\bank_results.csv"
+
+# Open the output file
+# newline="" is used to take out space in between rows
+with open(output_file, "w", newline="") as datafile:
+    writer = csv.writer(datafile)
+
+    # Write the results; add brackets to keep comma from separating characters in string
+    writer.writerow(["Financial Analysis"])
+    writer.writerow(["-----------------------------------"])
+    writer.writerow([f"Total Months: {str(total_months)}"])
+    writer.writerow([f"Total: ${str(net_total)}"])
+    writer.writerow([f"Average Change: ${str(average_change)}"])
+    writer.writerow([f"Greatest Increase in Profits: {str(date_grt_incr)} (${str(greatest_increase)})"])
+    writer.writerow([f"Greatest Decrease in Profits: {str(date_grt_decr)} (${str(greatest_decrease)})"])
