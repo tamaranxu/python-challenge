@@ -37,6 +37,9 @@ with open(csvpath) as csvfile:
 # calculate total number of votes cast; length of list
 total_votes = len(voter_id)
 
+# ran print function on unique_candidates list to identify names for next steps
+# deleted in final code since did not need to print to terminal
+
 # list comprehension with conditional to find all occurences of each candidate in
 # candidates list and use len function to total the number
 Khan_votes = len([candidate for candidate in candidates if candidate == "Khan"])
@@ -79,3 +82,25 @@ print(f"O'Tooley': {str(OTooley_percent)}% ({str(OTooley_votes)})")
 print("-----------------------------")
 print(f"Winner: {str(winner)}")
 print("-----------------------------")
+
+# export text file with same results
+# set variable for output file
+output_file = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyPoll\Analysis\poll_results.csv"
+
+# Open the output file
+# newline="" is used to take out space in between rows
+with open(output_file, "w", newline="") as datafile:
+    writer = csv.writer(datafile)
+
+    # Write the results; add brackets to keep comma from separating characters in string
+    writer.writerow(["Election Results"])
+    writer.writerow(["-----------------------------"])
+    writer.writerow([f"Total Votes: {str(total_votes)}"])
+    writer.writerow(["-----------------------------"])
+    writer.writerow([f"Khan: {str(Khan_percent)}% ({str(Khan_votes)})"])
+    writer.writerow([f"Correy: {str(Correy_percent)}% ({str(Correy_votes)})"])
+    writer.writerow([f"Li: {str(Li_percent)}% ({str(Li_votes)})"])
+    writer.writerow([f"O'Tooley': {str(OTooley_percent)}% ({str(OTooley_votes)})"])
+    writer.writerow(["-----------------------------"])
+    writer.writerow([f"Winner: {str(winner)}"])
+    writer.writerow(["-----------------------------"])
