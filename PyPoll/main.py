@@ -32,4 +32,8 @@ with open(csvpath) as csvfile:
             # add value to unique list
             unique_candidates.append(row[2])
     
+# calculate total number of votes cast; length of list
+total_votes = len(voter_id)
+
+# create a complete list of candidates who received votes
 print(unique_candidates)
