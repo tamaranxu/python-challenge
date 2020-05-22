@@ -37,3 +37,8 @@ total_votes = len(voter_id)
 
 # create a complete list of candidates who received votes
 print(unique_candidates)
+
+# list comprehension with conditional to find all occurences of Khan in
+# candidates list and use len function to total the number
+Khan_votes = len([candidate for candidate in candidates if candidate == "Khan"])
+print(Khan_votes)
