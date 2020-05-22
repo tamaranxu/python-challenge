@@ -3,7 +3,7 @@ import os
 import csv
 
 # Set path for file
-csvpath = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyBank\Resources\budget_data.csv"
+csvpath = os.path.join("Resources/budget_data.csv")
 
 # lists to store data
 date = []
@@ -73,7 +73,7 @@ print(f"Greatest Decrease in Profits: {str(date_grt_decr)} (${str(greatest_decre
 
 # export text file with same results
 # set variable for output file
-output_file = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyBank\Analysis\bank_results.csv"
+output_file = os.path.join("Analysis/bank_results.csv")
 
 # Open the output file
 # newline="" is used to take out space in between rows

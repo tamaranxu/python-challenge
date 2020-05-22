@@ -3,7 +3,7 @@ import os
 import csv
 
 # Set path for file
-csvpath = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyPoll\Resources\election_data.csv"
+csvpath = os.path.join("Resources/election_data.csv")
 
 # lists to store original data
 voter_id = []
@@ -85,7 +85,7 @@ print("-----------------------------")
 
 # export text file with same results
 # set variable for output file
-output_file = r"C:\Users\tamar\OneDrive\Documents\GitHub\python-challenge\PyPoll\Analysis\poll_results.csv"
+output_file = os.path.join("Analysis/poll_results.csv")
 
 # Open the output file
 # newline="" is used to take out space in between rows
