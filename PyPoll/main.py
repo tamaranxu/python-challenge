@@ -51,3 +51,16 @@ print(Li_votes)
 
 OTooley_votes = len([candidate for candidate in candidates if candidate == "O'Tooley"])
 print(OTooley_votes)
+
+# calculate % of total votes for each candidate, rounded to 3 decimals
+Khan_percent = round(((Khan_votes/total_votes) * 100), 3)
+print(Khan_percent)
+
+Correy_percent = round(((Correy_votes/total_votes) * 100), 3)
+print(Correy_percent)
+
+Li_percent = round(((Li_votes/total_votes) * 100), 3)
+print(Li_percent)
+
+OTooley_percent = round(((OTooley_votes/total_votes) * 100), 3)
+print(OTooley_percent)
