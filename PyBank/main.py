@@ -35,6 +35,7 @@ with open(csvpath) as csvfile:
         
         # calculate difference between profit_losses column and previous row; add to list as integer
         if previous_row == 0:
+            #set first value as 0, since no previous row
             changes.append(int(0))
         else:
             changes.append(change)
@@ -48,6 +49,8 @@ with open(csvpath) as csvfile:
             elif change <= greatest_decrease:
                 greatest_decrease = change
                 date_grt_decr = row[0]
+        
+        #re-set value of previous row
         previous_row = int(row[1])
         
 # find total number of months in data set
