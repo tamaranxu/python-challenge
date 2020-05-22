@@ -64,3 +64,36 @@ print(Li_percent)
 
 OTooley_percent = round(((OTooley_votes/total_votes) * 100), 3)
 print(OTooley_percent)
+
+vote_percents = [Khan_percent, Correy_percent, Li_percent, OTooley_percent]
+final_percents = zip(unique_candidates, vote_percents)
+
+
+# find winner of election
+# create new dictionary with percentages
+#candidate_percentages = {"name": ["Khan", "Correy", "Li", "O'Tooley"], 
+                         #"percentage": [Khan_percent, Correy_percent, Li_percent, OTooley_percent]}
+#candidate_percentages = {"Khan": Khan_percent,
+                         #"Correy": Correy_percent,
+                         #"Li": Li_percent,
+                         #"O'Tooley": OTooley_percent}
+#candidate_percentages = [{"name": ["Khan", "Correy", "Li", "O'Tooley"]}, 
+                         #{"percentage": [Khan_percent, Correy_percent, Li_percent, OTooley_percent]}]
+#Khan_total = {"name": "Khan"}
+winning_value = 0
+#for value in candidate_percentages:
+    #if {candidate_percentages["percentage"]} > winning_value:
+        #winning_value = {candidate_percentages["percentage"]}
+        #winning_candidate = {candidate_percentages["name"]}
+    #if [candidate_percentages{"percentage"}] > winning_value:
+        #winning_value = [candidate_percentages{"percentage"}]
+        #winning_candidate = [candidate_percentages{"name"}]
+#print(winning_candidate)
+
+for row in final_percents:
+    if row[1] > winning_value:
+        winning_value = row[1]
+        winner = row[0]
+        
+#winner = [row for row in final_percents if row[1] > winning_value]
+print(winner)
