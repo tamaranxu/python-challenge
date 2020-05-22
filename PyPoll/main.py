@@ -67,3 +67,15 @@ for row in final_percents:
         winning_value = row[1]
         winner = row[0]
         
+# print results to terminal
+print("Election Results")
+print("-----------------------------")
+print(f"Total Votes: {str(total_votes)}")
+print("-----------------------------")
+print(f"Khan: {str(Khan_percent)}% ({str(Khan_votes)})")
+print(f"Correy: {str(Correy_percent)}% ({str(Correy_votes)})")
+print(f"Li: {str(Li_percent)}% ({str(Li_votes)})")
+print(f"O'Tooley': {str(OTooley_percent)}% ({str(OTooley_votes)})")
+print("-----------------------------")
+print(f"Winner: {str(winner)}")
+print("-----------------------------")
